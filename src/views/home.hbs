@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles.css" />
+    <title>Assignments</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Assignments</h1>
+
+      <table>
+        <tr>
+          <th>Assignments</th>
+          <th>Score</th>
+          <th>Total</th>
+          <th>Completed</th>
+          <th>Actions</th>
+        </tr>
+        {{#each homeWork}}
+          <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.score}}</td>
+            <td>{{this.total}}</td>
+            {{#if this.completed}}
+              <td>&check;</td>
+            {{else}}
+              <td></td>
+            {{/if}}
+            <td><a href="delete-assignment/{{this.name}}">Delete</a></td>
+          </tr>
+        {{/each}}
+      </table>
+      <br />
+      Overall Average:
+      {{fixedAverage}}%
+      <br />
+
+      <a href="addAssignment">Add an Assignment</a>
+    </div>
+  </body>
+</html>
