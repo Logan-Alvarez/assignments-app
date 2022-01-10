@@ -2,4 +2,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: lightseagreen;
+}
+
+table,
+th {
+  padding: 0 5px;
+}
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+/* AVERAGE */
+.average {
+  font-size: large;
+}
+
+/* LINKS */
+a:hover {
+  color: indianred;
+  transition-duration: 0.3s;
+}
+a {
+  font-size: large;
+}
+
+/* P TAGS */
+
+p {
+  font-size: large;
+}
+
+/* INPUTS */
+
+input[type="text"]:focus {
+  background-color: lightblue;
+}
+input[type="number"]:focus {
+  background-color: lightblue;
+}
+input[type="submit"]:hover {
+  background-color: lightgreen;
+  transition-duration: 0.3s;
+}
+input[type="submit"] {
+  width: 20%;
+  border-radius: 5px;
+  margin-top: 5%;
 }
